@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: game-ci/unity-request-activation-file@v2
+      - uses: game-ci/unity-request-activation-file@v2.0-alpha-1
         id: getManualLicenseFile
         with:
           customImage: unityci/editor:2021.3.3f1-base-1
