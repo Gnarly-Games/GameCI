@@ -16,7 +16,6 @@ jobs:
       - uses: game-ci/unity-request-activation-file@v2.0-alpha-1
         id: getManualLicenseFile
         with:
-          customImage: unityci/editor:2021.3.3f1-base-1
           unityVersion: ${{ matrix.unityVersion }}
 
       - uses: actions/upload-artifact@v2
