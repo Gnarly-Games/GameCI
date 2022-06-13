@@ -6,6 +6,10 @@ jobs:
   requestManualActivationFile:
     name: Request manual activation file 🔑
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        unityVersion:
+          - 2021.3.3f1
     steps:
       - uses: actions/checkout@v2
 
@@ -13,6 +17,8 @@ jobs:
         id: getManualLicenseFile
         with:
           customImage: unityci/editor:2021.3.3f1-base-1
+          unityVersion: ${{ matrix.unityVersion }}
+
       - uses: actions/upload-artifact@v2
         with:
           name: Manual Activation File
