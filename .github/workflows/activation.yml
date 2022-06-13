@@ -12,7 +12,7 @@ jobs:
       - uses: game-ci/unity-request-activation-file@v2
         id: getManualLicenseFile
         with:
-          customImage: unityci/editor:2021.3.3f1-base-1.0
+          customImage: unityci/editor:2021.3.3f1-base-1
       - uses: actions/upload-artifact@v2
         with:
           name: Manual Activation File

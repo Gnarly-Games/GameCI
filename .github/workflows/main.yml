@@ -94,7 +94,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: WebGL
-          customImage: unityci/editor:2021.3.3f1-base-1.0
+          customImage: unityci/editor:2021.3.3f1-base-1
 
       - uses: actions/upload-artifact@v2
         with:
@@ -139,7 +139,7 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           targetPlatform: Android
-          customImage: unityci/editor:2021.3.3f1-base-1.0
+          customImage: unityci/editor:2021.3.3f1-base-1
       - uses: actions/upload-artifact@v2
         with:
           name: build-Android
