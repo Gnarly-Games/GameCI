@@ -50,7 +50,6 @@ jobs:
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          customImage: unityci/editor:2021.3.3f1-base-0
           
       - uses: actions/upload-artifact@v2
         with:
@@ -95,7 +94,7 @@ jobs:
       - uses: game-ci/unity-builder@v2.0-alpha-6
         with:
           targetPlatform: WebGL
-          customImage: unityci/editor:2021.3.3f1-base-1
+          customImage: unityci/2021.3.1f1-base-1
 
       - uses: actions/upload-artifact@v2
         with:
@@ -140,7 +139,7 @@ jobs:
       - uses: game-ci/unity-builder@v2.0-alpha-6
         with:
           targetPlatform: Android
-          customImage: unityci/editor:2021.3.3f1-base-1
+          customImage: unityci/editor:2021.3.1f1-base-1
       - uses: actions/upload-artifact@v2
         with:
           name: build-Android
